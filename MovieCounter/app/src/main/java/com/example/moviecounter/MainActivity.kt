@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,6 +34,7 @@ class MainActivity : ComponentActivity() {
                     Column(modifier = Modifier.padding(innerPadding)) {
                         MiCard()
                         MiCheckbox()
+                        MiTextField() // 👈 agregado (commit 3)
                     }
                 }
             }
@@ -68,6 +70,19 @@ fun MiCheckbox() {
     }
 }
 
+// 🔥 NUEVO COMPONENTE (commit 3)
+@Composable
+fun MiTextField() {
+    var texto by remember { mutableStateOf("") }
+
+    OutlinedTextField(
+        value = texto,
+        onValueChange = { texto = it },
+        label = { Text("Escribe aquí") },
+        modifier = Modifier.padding(16.dp)
+    )
+}
+
 @Preview(showBackground = true)
 @Composable
 fun PreviewComponentes() {
@@ -75,6 +90,7 @@ fun PreviewComponentes() {
         Column {
             MiCard()
             MiCheckbox()
+            MiTextField() 
         }
     }
 }
