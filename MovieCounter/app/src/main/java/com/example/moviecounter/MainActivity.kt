@@ -47,8 +47,7 @@ fun MiCard(modifier: Modifier = Modifier) {
     Card(
         modifier = modifier.padding(16.dp)
     ) {
-        Text(
-            text = "Card editada en main",
+        Text(text = "Card final resuelta",
             modifier = Modifier.padding(16.dp)
         )
     }
