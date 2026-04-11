@@ -47,10 +47,10 @@ fun MiCard(modifier: Modifier = Modifier) {
     Card(
         modifier = modifier.padding(16.dp)
     ) {
-        Text(
-            text = "Esta es una Card",
-            modifier = Modifier.padding(16.dp)
-        )
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(text = "Esta es una Card mejorada")
+            Text(text = "Componente actualizado en la nueva rama")
+        }
     }
 }
 
