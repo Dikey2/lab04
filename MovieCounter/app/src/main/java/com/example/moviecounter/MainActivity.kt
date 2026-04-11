@@ -48,7 +48,7 @@ fun MiCard(modifier: Modifier = Modifier) {
         modifier = modifier.padding(16.dp)
     ) {
         Text(
-            text = "Esta es una Card",
+            text = "Esta es una Card editada en conflicto-rama",
             modifier = Modifier.padding(16.dp)
         )
     }
