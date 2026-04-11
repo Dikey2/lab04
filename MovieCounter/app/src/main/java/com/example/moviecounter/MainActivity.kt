@@ -70,7 +70,7 @@ fun MiCheckbox() {
     }
 }
 
-// 🔥 NUEVO COMPONENTE (commit 3)
+
 @Composable
 fun MiTextField() {
     var texto by remember { mutableStateOf("") }
@@ -78,7 +78,7 @@ fun MiTextField() {
     OutlinedTextField(
         value = texto,
         onValueChange = { texto = it },
-        label = { Text("Escribe aquí") },
+        label = { Text("Ingresa tu película favorita") },
         modifier = Modifier.padding(16.dp)
     )
 }
